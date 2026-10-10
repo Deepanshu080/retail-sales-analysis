@@ -4,7 +4,7 @@ import seaborn as sns
 df=pd.read_csv("data/retail_sales_dataset copy.csv")
 
 
-'''# Check the number of rows and columns
+# Check the number of rows and columns
 print(df.shape)
 
 # Check column names and data types
@@ -82,7 +82,7 @@ df["Age Group"] = pd.cut(
 
 age_sales = df.groupby("Age Group", observed=False)["Total Amount"].sum()
 
-print(age_sales.sort_values(ascending=False))'''
+print(age_sales.sort_values(ascending=False))
 
 #which gender spends more on average
 average_spending = df.groupby('Gender')['Total Amount'].mean()
@@ -106,7 +106,7 @@ plt.xticks(rotation=45)
 
 plt.tight_layout()
 plt.show()
-'''
+
 plt.figure(figsize=(9, 5))
 
 sns.boxplot(
@@ -166,7 +166,7 @@ print(average_spending.sort_values(ascending=False))
 
 df.to_csv("data/retail_sales_cleaned.csv", index=False)
 
-print("Cleaned dataset exported successfully!")'''
+print("Cleaned dataset exported successfully!")
 
 print("\n===== RETAIL SALES BUSINESS INSIGHTS =====")
 
